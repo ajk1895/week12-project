@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Band App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body class="container-fluid bg-dark ">
+    <nav class="navbar navbar-dark bg-dark border-bottom">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Band Manager</span>
+        </div>
+    </nav>
+
+    <div class="mt-3 text-white text-center border-bottom">
+        <h3>New Band</h3>
+        <button class="btn btn-secondary mb-3" onclick="onCreateBand()">Create Band!</button>
+    </div>
+
+    <div class="container-fluid text-white text-center" >
+        <span><h3>Current Bands:</h3></span>
+        <div id="band-holder">
+
+        </div>
+    </div>
+    
+    <div class="modal text-center text-white" tabindex="-1" id="band-modal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 id="band-modal-title" class="modal-title">Edit Band</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="name-edit-input" class="form-label">Band Name</label>
+                    <input type="text" id="name-input" class="form-control bg-dark text-white" />
+                    <label for="name-edit-input" class="form-label">Band Members</label>
+                    <input type="text" id="members-input" class="form-control bg-dark text-white" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="onSave()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
